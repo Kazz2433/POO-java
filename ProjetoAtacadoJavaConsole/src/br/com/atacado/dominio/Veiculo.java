@@ -1,0 +1,48 @@
+package br.com.atacado.dominio;
+
+import java.time.LocalDate;
+
+public class Veiculo extends BaseTransporte {
+    private int codigoFrota;
+    private String placa;
+
+    public int getCodigoFrota() {
+        return codigoFrota;
+    }
+    
+    public void setCodigoFrota(int codigoFrota) {
+        this.codigoFrota = codigoFrota;
+    }
+    
+    
+    
+    public String getPlaca() {
+        return placa;
+    }
+    
+    
+    
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+    
+
+    public Veiculo() {
+    }
+    
+    public Veiculo(int codigo, String descricao, LocalDate dataInsert, int codigoFrota, String placa) {
+        super(codigo, descricao, dataInsert);
+        this.codigoFrota = codigoFrota;
+        this.placa = placa;
+    }
+
+    @Override
+    public void Imprimir() {
+        System.out.println("Codigo: " + this.getCodigo());
+        System.out.println("Descricao: " + this.getDescricao());
+        System.out.println("Data de Inclusao: " + this.getDataInsert());
+        System.out.println("Codigo da Frota: " + this.getCodigoFrota());
+        System.out.println("Placa: " + this.getPlaca());
+    }
+    
+}
